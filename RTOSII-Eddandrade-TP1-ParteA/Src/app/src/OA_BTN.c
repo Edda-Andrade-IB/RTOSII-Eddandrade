@@ -15,37 +15,47 @@ enum Btn_Status Btn_State;
 BaseType_t sd;
 QueueHandle_t QueueBtnStatus;
 uint32_t aux;
-
+const char *OABTN_WelcomeMsg    	= "OA_BTN se está ejecutando\r\n";
+const char *debug1    				= "entre a la IRQ\r\n";
+const char *debug2    				= "entre a la SET\r\n";
+const char *debug3    				= "entre a la RESET\r\n";
 // Interrupción
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+	vPrintString( debug1 );
 	aux = HAL_GetTick()/portTICK_PERIOD_MS; //guardo el tiempo en el que se llama al callback
-	if (GPIO_Pin == GPIO_PIN_RESET) {
+	if (eboard_switch()) {
+		vPrintString( debug2 );
 		RisingUp_Time = aux;
 		FallingDown_Time = 0;
 	}
-	else if (GPIO_Pin == GPIO_PIN_SET) {FallingDown_Time = aux;
+	else if (!eboard_switch()) {
+		vPrintString( debug2 );FallingDown_Time = aux;
 	}
 }
 
 //Tarea objeto activo
 void vTask_OA_BTN(void *pvParameters) {
+	vPrintString(OABTN_WelcomeMsg);
 	while (1) {
 
 		BtnPressed_Time = FallingDown_Time - RisingUp_Time;
 
 		if (0 < BtnPressed_Time && BtnPressed_Time < 2000) {
 			RisingUp_Time = 0; //Reseteo el contador de tiempo del rising edge
+			vPrintString(SHORTPRESSEDMsg);
 			Btn_State = SHORTPRESSED;
 		} else if (2000 < BtnPressed_Time && BtnPressed_Time < 8000) {
 			RisingUp_Time = 0; //Reseteo el contador de tiempo del rising edge
+			vPrintString(LONGPRESSEDMsg);
 			Btn_State = LONGPRESSED;
 
 		} else if (RisingUp_Time != 0
 				&& (BtnPressed_Time >= 8000 || BtnPressed_Time < 0)) {
-
+			vPrintString(BLOCKEDMsg);
 			Btn_State = BLOCKED;
 		} else if (RisingUp_Time == 0 && (BtnPressed_Time >= 8000)) {
+			vPrintString(UNBLOCKEDMsg);
 			Btn_State = UNBLOCKED;
 		}
 

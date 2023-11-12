@@ -1,4 +1,4 @@
-18:03:09 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-Template446RE ****
+19:58:08 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-Template446RE ****
 make -j16 all 
 arm-none-eabi-size   RTOSII-Eddandrade-Template446RE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   RTOSII-Eddandrade-Template446RE.elf
 Finished building: default.size.stdout
  
 
-18:03:10 Build Finished. 0 errors, 0 warnings. (took 233ms)
+19:58:09 Build Finished. 0 errors, 0 warnings. (took 441ms)
 

@@ -1,4 +1,0 @@
-../Supporting_Functions/Src/supporting_Functions.c:116:1:__io_putchar	16	static
-../Supporting_Functions/Src/supporting_Functions.c:127:6:vPrintString	16	static
-../Supporting_Functions/Src/supporting_Functions.c:140:6:vPrintStringAndNumber	16	static
-../Supporting_Functions/Src/supporting_Functions.c:153:6:vPrintTwoStrings	16	static

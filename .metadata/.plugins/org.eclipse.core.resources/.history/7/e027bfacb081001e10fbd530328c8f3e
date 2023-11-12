@@ -1,0 +1,56 @@
+/*
+ * OA_BTN.c
+ *
+ *  Created on: Nov 12, 2023
+ *      Author: Compumax
+ */
+
+#include "OA_BTN.h"
+
+volatile uint32_t RisingUp_Time = 0;
+volatile uint32_t FallingDown_Time = 0;
+volatile uint32_t BtnPressed_Time = 0;
+bool flag = 0;
+enum Btn_Status Btn_State;
+BaseType_t sd;
+QueueHandle_t QueueBtnStatus;
+uint32_t aux;
+
+// Interrupción
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+	aux = HAL_GetTick()/portTICK_PERIOD_MS; //guardo el tiempo en el que se llama al callback
+	if (GPIO_Pin == GPIO_PIN_RESET) {
+		RisingUp_Time = aux;
+		FallingDown_Time = 0;
+	}
+	else if (GPIO_Pin == GPIO_PIN_SET) {FallingDown_Time = aux;
+	}
+}
+
+//Tarea objeto activo
+void vTask_OA_BTN(void *pvParameters) {
+	while (1) {
+
+		BtnPressed_Time = FallingDown_Time - RisingUp_Time;
+
+		if (0 < BtnPressed_Time && BtnPressed_Time < 2000) {
+			RisingUp_Time = 0; //Reseteo el contador de tiempo del rising edge
+			Btn_State = SHORTPRESSED;
+		} else if (2000 < BtnPressed_Time && BtnPressed_Time < 8000) {
+			RisingUp_Time = 0; //Reseteo el contador de tiempo del rising edge
+			Btn_State = LONGPRESSED;
+
+		} else if (RisingUp_Time != 0
+				&& (BtnPressed_Time >= 8000 || BtnPressed_Time < 0)) {
+
+			Btn_State = BLOCKED;
+		} else if (RisingUp_Time == 0 && (BtnPressed_Time >= 8000)) {
+			Btn_State = UNBLOCKED;
+		}
+
+		sd = xQueueSend(QueueBtnStatus, &Btn_State, portMAX_DELAY);
+		assert(sd != 0); // revisar que el mensaje se halla encolado correctamente.
+	}
+}
+
