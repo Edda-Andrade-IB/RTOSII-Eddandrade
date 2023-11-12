@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RTOSII-Eddandrade-TP1-ParteA/RTOSII-Eddandrade-Template446RE.ioc&apos; to &apos;RTOSII-Eddandrade-TP1-ParteA.ioc&apos;" description="Rename resource &apos;RTOSII-Eddandrade-Template446RE.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="RTOSII-Eddandrade-Template446RE.ioc" name="RTOSII-Eddandrade-TP1-ParteA.ioc" stamp="1699741285116" updateReferences="true"/>
+</session>

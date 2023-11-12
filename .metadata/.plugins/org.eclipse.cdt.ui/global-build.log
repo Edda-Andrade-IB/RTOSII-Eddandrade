@@ -1,0 +1,91 @@
+18:55:42 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/app/src/OA_BTN.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-Template446RE/Src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/hal/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/app/src/OA_BTN.d" -MT"Src/app/src/OA_BTN.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/app/src/OA_BTN.o"
+arm-none-eabi-gcc -o "RTOSII-Eddandrade-TP1-ParteA.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Compumax\Documents\GitHub\RTOSII-Eddandrade\RTOSII-Eddandrade-TP1-ParteA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOSII-Eddandrade-TP1-ParteA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOSII-Eddandrade-TP1-ParteA.elf
+ 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+arm-none-eabi-objdump -h -S  RTOSII-Eddandrade-TP1-ParteA.elf  > "RTOSII-Eddandrade-TP1-ParteA.list"
+   text	   data	    bss	    dec	    hex	filename
+  25028	    152	  18520	  43700	   aab4	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTOSII-Eddandrade-TP1-ParteA.list
+ 
+18:55:46 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25028	    152	  18520	  43700	   aab4	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+18:56:58 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/app/src/OA_BTN.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-Template446RE/Src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/hal/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/app/src/OA_BTN.d" -MT"Src/app/src/OA_BTN.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/app/src/OA_BTN.o"
+arm-none-eabi-gcc -o "RTOSII-Eddandrade-TP1-ParteA.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Compumax\Documents\GitHub\RTOSII-Eddandrade\RTOSII-Eddandrade-TP1-ParteA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOSII-Eddandrade-TP1-ParteA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOSII-Eddandrade-TP1-ParteA.elf
+ 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+arm-none-eabi-objdump -h -S  RTOSII-Eddandrade-TP1-ParteA.elf  > "RTOSII-Eddandrade-TP1-ParteA.list"
+   text	   data	    bss	    dec	    hex	filename
+  25020	    152	  18520	  43692	   aaac	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTOSII-Eddandrade-TP1-ParteA.list
+ 
+18:58:08 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/app/src/OA_BTN.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-Template446RE/Src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/hal/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/app/src/OA_BTN.d" -MT"Src/app/src/OA_BTN.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/app/src/OA_BTN.o"
+arm-none-eabi-gcc -o "RTOSII-Eddandrade-TP1-ParteA.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Compumax\Documents\GitHub\RTOSII-Eddandrade\RTOSII-Eddandrade-TP1-ParteA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOSII-Eddandrade-TP1-ParteA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOSII-Eddandrade-TP1-ParteA.elf
+ 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+arm-none-eabi-objdump -h -S  RTOSII-Eddandrade-TP1-ParteA.elf  > "RTOSII-Eddandrade-TP1-ParteA.list"
+   text	   data	    bss	    dec	    hex	filename
+  25028	    152	  18520	  43700	   aab4	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTOSII-Eddandrade-TP1-ParteA.list
+ 
+19:08:34 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/app/src/OA_BTN.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-Template446RE/Src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/hal/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/app/src/OA_BTN.d" -MT"Src/app/src/OA_BTN.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/app/src/OA_BTN.o"
+arm-none-eabi-gcc -o "RTOSII-Eddandrade-TP1-ParteA.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Compumax\Documents\GitHub\RTOSII-Eddandrade\RTOSII-Eddandrade-TP1-ParteA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOSII-Eddandrade-TP1-ParteA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOSII-Eddandrade-TP1-ParteA.elf
+ 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+arm-none-eabi-objdump -h -S  RTOSII-Eddandrade-TP1-ParteA.elf  > "RTOSII-Eddandrade-TP1-ParteA.list"
+   text	   data	    bss	    dec	    hex	filename
+  25028	    152	  18520	  43700	   aab4	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTOSII-Eddandrade-TP1-ParteA.list
+ 
+19:11:35 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/app/src/OA_BTN.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-Template446RE/Src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/app/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/hal/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Src/lib/src" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Inc" -I"C:/Users/Compumax/Documents/GitHub/RTOSII-Eddandrade/RTOSII-Eddandrade-TP1-ParteA/Supporting_Functions/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/app/src/OA_BTN.d" -MT"Src/app/src/OA_BTN.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/app/src/OA_BTN.o"
+arm-none-eabi-gcc -o "RTOSII-Eddandrade-TP1-ParteA.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Compumax\Documents\GitHub\RTOSII-Eddandrade\RTOSII-Eddandrade-TP1-ParteA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOSII-Eddandrade-TP1-ParteA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOSII-Eddandrade-TP1-ParteA.elf
+ 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+arm-none-eabi-objdump -h -S  RTOSII-Eddandrade-TP1-ParteA.elf  > "RTOSII-Eddandrade-TP1-ParteA.list"
+   text	   data	    bss	    dec	    hex	filename
+  25032	    152	  18520	  43704	   aab8	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTOSII-Eddandrade-TP1-ParteA.list
+ 
+19:14:31 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25032	    152	  18520	  43704	   aab8	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 
+19:15:53 **** Incremental Build of configuration Debug for project RTOSII-Eddandrade-TP1-ParteA ****
+make -j16 all 
+arm-none-eabi-size   RTOSII-Eddandrade-TP1-ParteA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25032	    152	  18520	  43704	   aab8	RTOSII-Eddandrade-TP1-ParteA.elf
+Finished building: default.size.stdout
+ 

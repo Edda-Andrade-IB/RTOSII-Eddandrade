@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RTOSII-Eddandrade-TP1-ParteA/Src/app/src/OA_LEDS&apos; to &apos;OA_LEDS.c&apos;" description="Rename resource &apos;OA_LEDS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/app/src/OA_LEDS" name="OA_LEDS.c" stamp="1699815817646" updateReferences="true"/>
+</session>
