@@ -24,17 +24,17 @@ extern volatile uint32_t RisingUp_Time; //tick de tiempo en el que se produce el
 extern volatile uint32_t FallingDown_Time; //tick de tiempo en el que se produce el falling edge variable global pública y volátil (no optimizada)
 extern enum Btn_Status Btn_State;
 
+extern const char *SHORTPRESSEDMsg;
+extern const char *LONGPRESSEDMsg;
+extern const char *BLOCKEDMsg;
+extern const char *UNBLOCKEDMsg;
 
-const char *SHORTPRESSEDMsg    		= "SHORTPRESSED\r\n";
-const char *LONGPRESSEDMsg 			= "LONGPRESSED\r\n";
-const char *BLOCKEDMsg 				= "BLOCKED\r\n";
-const char *UNBLOCKEDMsg  			= "UNBLOCKED\r\n";
 
 extern QueueHandle_t QueueBtnStatus; //cola para enviar el estado del botón a los leds
 extern BaseType_t sd;
 
 enum Btn_Status {
-	SHORTPRESSED, LONGPRESSED, BLOCKED, UNBLOCKED
+	NONE, SHORTPRESSED, LONGPRESSED, BLOCKED, UNBLOCKED
 };
 
 extern void vTask_OA_BTN(void *pvParameters);

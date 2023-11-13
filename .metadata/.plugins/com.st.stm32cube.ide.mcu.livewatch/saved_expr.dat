@@ -2,3 +2,4 @@ aux
 BtnPressed_Time
 FallingDown_Time
 RisingUp_Time
+Btn_State
